@@ -26,11 +26,37 @@ const itemsCollection = document.getElementsByClassName('item');
 
 itemsCollection[counterImg].classList.remove('d-none');
 
-
+//BOTTONE BOTTOM/////////////////////////////////////////////
 btnBot.addEventListener('click', function(){
   
+  btnTop.classList.remove('d-none');
+
   itemsCollection[counterImg].classList.add('d-none');
+  
   counterImg ++;
+  
   itemsCollection[counterImg].classList.remove('d-none');
 
-})
+  if(counterImg === images.length - 1){
+    btnBot.classList.add('d-none');
+  }
+});
+
+////////////////////////////////////////////////////////////
+
+//BOTTONE TOP //////////////////////////////////////////////
+
+btnTop.addEventListener('click', function(){
+  
+  btnBot.classList.remove('d-none');
+  
+  itemsCollection[counterImg].classList.add('d-none');
+
+  counterImg--;
+
+  itemsCollection[counterImg].classList.remove('d-none');
+
+  if(counterImg === 0){
+    btnTop.classList.add('d-none');
+  }
+});

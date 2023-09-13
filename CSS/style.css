@@ -5,14 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  background-color: rgba(128, 128, 128, 0.43);
 }
 
 .container{
   width: 60%;
   height: 60%;
   margin: 0 auto;
-  background-color: red; /* DEBUGGARE */
 }
 
 
@@ -23,6 +22,9 @@
 
 .pictures-container{
   height: 100%;
+  border-radius: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.536);
+  overflow: hidden;
 }
 
 .pictures-container img {
