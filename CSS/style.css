@@ -9,8 +9,8 @@
 }
 
 .container{
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 90%;
   margin: 0 auto;
 }
 
@@ -22,12 +22,18 @@
 
 .pictures-container{
   height: 100%;
-  border-radius: 30px;
+  
   border: 4px solid rgba(0, 0, 0, 0.536);
-  overflow: hidden;
+ 
 }
 
 .pictures-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selected img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -43,8 +49,8 @@
   line-height: 50px;
   border-radius: 50%;
   text-align: center;
-  left: 50%;
-  transform: translatex(-50%);
+  left: calc(75% / 2);
+  transform: translatex(calc(- 75% / 2));
 }
 
 .slide-btn.top {
@@ -57,4 +63,18 @@
 
 .btn-arrow:hover{
   background-color: purple;
+}
+
+.selected{
+  position: relative;
+  height: 20%;
+  width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.678);
+}
+
+.mask{
+  background-color: rgba(0, 0, 0, 0.482);
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

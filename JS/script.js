@@ -55,7 +55,7 @@ btnTop.addEventListener('click', function(){
   counterImg--;
 
   itemsCollection[counterImg].classList.remove('d-none');
-
+  
   if(counterImg === 0){
     btnTop.classList.add('d-none');
   }
