@@ -23,8 +23,12 @@ for(let i = 0; i < images.length; i++){
 };
 
 const itemsCollection = document.getElementsByClassName('item');
+const maskCollection = document.getElementsByClassName('mask');
+const smallImgCollection = document.getElementsByClassName('img-small');
 
 itemsCollection[counterImg].classList.remove('d-none');
+maskCollection[counterImg].classList.add('d-none');
+smallImgCollection[counterImg].classList.add('selected');
 
 //BOTTONE BOTTOM/////////////////////////////////////////////
 btnBot.addEventListener('click', function(){
@@ -32,13 +36,18 @@ btnBot.addEventListener('click', function(){
   btnTop.classList.remove('d-none');
 
   itemsCollection[counterImg].classList.add('d-none');
+  smallImgCollection[counterImg].classList.remove('selected');
+  maskCollection[counterImg].classList.remove('d-none');
   
+
   counterImg ++;
   
   itemsCollection[counterImg].classList.remove('d-none');
+  smallImgCollection[counterImg].classList.add('selected');
+  maskCollection[counterImg].classList.add('d-none');
 
   if(counterImg === images.length - 1){
-    btnBot.classList.add('d-none');
+   btnBot.classList.add('d-none')
   }
 });
 
@@ -51,11 +60,15 @@ btnTop.addEventListener('click', function(){
   btnBot.classList.remove('d-none');
   
   itemsCollection[counterImg].classList.add('d-none');
+  smallImgCollection[counterImg].classList.remove('selected');
+  maskCollection[counterImg].classList.remove('d-none');
 
   counterImg--;
 
   itemsCollection[counterImg].classList.remove('d-none');
-  
+  smallImgCollection[counterImg].classList.add('selected');
+  maskCollection[counterImg].classList.add('d-none');
+
   if(counterImg === 0){
     btnTop.classList.add('d-none');
   }

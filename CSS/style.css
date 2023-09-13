@@ -23,7 +23,7 @@
 .pictures-container{
   height: 100%;
   
-  border: 4px solid rgba(0, 0, 0, 0.536);
+  
  
 }
 
@@ -33,7 +33,7 @@
   object-fit: cover;
 }
 
-.selected img {
+.img-small img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -65,15 +65,18 @@
   background-color: purple;
 }
 
-.selected{
+.img-small{
   position: relative;
   height: 20%;
   width: 100%;
-  border: 4px solid rgba(255, 255, 255, 0.678);
+}
+
+.selected{
+  border: 4px solid white;
 }
 
 .mask{
-  background-color: rgba(0, 0, 0, 0.482);
+  background-color: rgba(0, 0, 0, 0.641);
   height: 100%;
   width: 100%;
   position: absolute;
