@@ -12,7 +12,6 @@ const images = [
 const btnTop = document.querySelector('.top');
 const btnBot = document.querySelector('.bot');
 
-btnTop.classList.add('d-none');
 
 let counterImg = 0;
 
@@ -33,7 +32,21 @@ smallImgCollection[counterImg].classList.add('selected');
 //BOTTONE BOTTOM/////////////////////////////////////////////
 btnBot.addEventListener('click', function(){
   
-  btnTop.classList.remove('d-none');
+  if(counterImg === images.length - 1){
+  
+  itemsCollection[counterImg].classList.add('d-none');
+  smallImgCollection[counterImg].classList.remove('selected');
+  maskCollection[counterImg].classList.remove('d-none');
+  
+  counterImg = 0;
+  
+  itemsCollection[counterImg].classList.remove('d-none');
+  smallImgCollection[counterImg].classList.add('selected');
+  maskCollection[counterImg].classList.add('d-none');
+    
+    
+  }else{
+    btnTop.classList.remove('d-none');
 
   itemsCollection[counterImg].classList.add('d-none');
   smallImgCollection[counterImg].classList.remove('selected');
@@ -45,9 +58,7 @@ btnBot.addEventListener('click', function(){
   itemsCollection[counterImg].classList.remove('d-none');
   smallImgCollection[counterImg].classList.add('selected');
   maskCollection[counterImg].classList.add('d-none');
-
-  if(counterImg === images.length - 1){
-   btnBot.classList.add('d-none')
+  console.log(counterImg)
   }
 });
 
@@ -56,6 +67,20 @@ btnBot.addEventListener('click', function(){
 //BOTTONE TOP //////////////////////////////////////////////
 
 btnTop.addEventListener('click', function(){
+  
+  if(counterImg === 0){
+
+  itemsCollection[counterImg].classList.add('d-none');
+  smallImgCollection[counterImg].classList.remove('selected');
+  maskCollection[counterImg].classList.remove('d-none');
+
+  counterImg = 4;
+
+  itemsCollection[counterImg].classList.remove('d-none');
+  smallImgCollection[counterImg].classList.add('selected');
+  maskCollection[counterImg].classList.add('d-none');
+    
+  }else{
   
   btnBot.classList.remove('d-none');
   
@@ -68,8 +93,9 @@ btnTop.addEventListener('click', function(){
   itemsCollection[counterImg].classList.remove('d-none');
   smallImgCollection[counterImg].classList.add('selected');
   maskCollection[counterImg].classList.add('d-none');
-
-  if(counterImg === 0){
-    btnTop.classList.add('d-none');
   }
 });
+
+console.log(itemsCollection[0]);
+console.log(itemsCollection[4])
+console.log(counterImg)
